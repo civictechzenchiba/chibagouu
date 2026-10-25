@@ -34,6 +34,7 @@ def main() -> int:
     by_kind = Counter(e.get("kind", "") for e in events)
     by_day = Counter((e.get("at") or "")[:10] for e in events)
     urls = {e.get("url") for e in events if e.get("url")}
+    with_archive = sum(1 for e in events if e.get("archive_url"))
 
     rows = list(csv.DictReader(CSV_PATH.open(encoding="utf-8", newline="")))
     watched = [r for r in rows if (r.get("url") or "").startswith("http")]
@@ -47,6 +48,7 @@ def main() -> int:
         ),
         "period": {"first": events[0].get("at", ""), "last": events[-1].get("at", "")},
         "events_total": len(events),
+        "events_with_archive_url": with_archive,
         "pages_changed": len(urls),
         "pages_watched": len(watched),
         "municipalities": len(by_muni),
@@ -58,7 +60,8 @@ def main() -> int:
     OUT.write_text(json.dumps(summary, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"wrote {OUT}")
     print(f"  期間 {summary['period']['first'][:16]} 〜 {summary['period']['last'][:16]}")
-    print(f"  検知 {summary['events_total']} 件 / 変化のあったページ {summary['pages_changed']} / "
+    print(f"  検知 {summary['events_total']} 件（Wayback の保存先あり {with_archive} 件） / "
+          f"変化のあったページ {summary['pages_changed']} / "
           f"監視 {summary['pages_watched']} / {summary['municipalities']} 市町村等")
     return 0
 
