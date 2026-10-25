@@ -1,8 +1,8 @@
 {
   "_comment": "このサイト固有の設定。別の災害・地域へ複製するときは、まずここを差し替える。手順は docs/replication-checklist.md",
-  "repo": "office626/r808chibagouu",
-  "base_url": "https://office626.github.io/r808chibagouu/",
-  "ua_prefix": "CTZC-r808chibagouu",
+  "repo": "civictechzenchiba/chibagouu",
+  "base_url": "https://civictechzenchiba.github.io/chibagouu/",
+  "ua_prefix": "CTZC-chibagouu",
   "disaster": {
     "name": "令和8年8月千葉豪雨",
     "name_en": "August 2026 Chiba Heavy Rain",

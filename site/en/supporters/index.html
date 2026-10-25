@@ -10,25 +10,25 @@
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-  <link rel="canonical" href="https://office626.github.io/r808chibagouu/en/supporters/index.html">
-  <link rel="alternate" hreflang="ja" href="https://office626.github.io/r808chibagouu/supporters/index.html">
-  <link rel="alternate" hreflang="en" href="https://office626.github.io/r808chibagouu/en/supporters/index.html">
-  <link rel="alternate" hreflang="x-default" href="https://office626.github.io/r808chibagouu/supporters/index.html">
+  <link rel="canonical" href="https://civictechzenchiba.github.io/chibagouu/en/supporters/index.html">
+  <link rel="alternate" hreflang="ja" href="https://civictechzenchiba.github.io/chibagouu/supporters/index.html">
+  <link rel="alternate" hreflang="en" href="https://civictechzenchiba.github.io/chibagouu/en/supporters/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://civictechzenchiba.github.io/chibagouu/supporters/index.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="CTZC Chiba Heavy Rain Portal">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="For Supporters and Partners | CTZC Chiba Heavy Rain Portal">
   <meta property="og:description" content="Learn how to help collect and share public information from government agencies and news organizations, join our Slack, and vote on future ideas.">
-  <meta property="og:url" content="https://office626.github.io/r808chibagouu/en/supporters/index.html">
-  <meta property="og:image" content="https://office626.github.io/r808chibagouu/img/chiba-recovery-banner.jpg">
+  <meta property="og:url" content="https://civictechzenchiba.github.io/chibagouu/en/supporters/index.html">
+  <meta property="og:image" content="https://civictechzenchiba.github.io/chibagouu/img/chiba-recovery-banner.jpg">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="537">
   <meta property="og:image:alt" content="Supporting recovery from the August 2026 Chiba heavy rain disaster, organized by CivicTechZenChiba">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="For Supporters and Partners | CTZC Chiba Heavy Rain Portal">
   <meta name="twitter:description" content="Learn how to help collect and share public information from government agencies and news organizations, join our Slack, and vote on future ideas.">
-  <meta name="twitter:image" content="https://office626.github.io/r808chibagouu/img/chiba-recovery-banner.jpg">
+  <meta name="twitter:image" content="https://civictechzenchiba.github.io/chibagouu/img/chiba-recovery-banner.jpg">
   <meta name="twitter:image:alt" content="Supporting recovery from the August 2026 Chiba heavy rain disaster, organized by CivicTechZenChiba">
 </head>
 <body>
@@ -118,7 +118,7 @@
       <ul>
         <li>Check that the URLs on the approved list open correctly</li>
         <li>Report incorrect links between municipalities and official websites</li>
-        <li><strong>Add one row of official municipal notices:</strong> add “slug, kind (risai/waste/disinfect/water/housing/vc/support/hub), title, URL, status, date checked” to <a href="https://github.com/office626/r808chibagouu/blob/main/data/supports.csv" target="_blank" rel="noopener"><code>data/supports.csv</code></a> (if you do not use git, write the same in a <a href="https://github.com/office626/r808chibagouu/issues/new" target="_blank" rel="noopener">GitHub issue</a>). Reports from the public arrive through the report form on municipality pages. Municipalities with few dedicated pages so far include Inzai, Yachimata, Shiroi, Narashino, Nagara, Shirako, Chosei and Sosa</li>
+        <li><strong>Add one row of official municipal notices:</strong> add “slug, kind (risai/waste/disinfect/water/housing/vc/support/hub), title, URL, status, date checked” to <a href="https://github.com/civictechzenchiba/chibagouu/blob/main/data/supports.csv" target="_blank" rel="noopener"><code>data/supports.csv</code></a> (if you do not use git, write the same in a <a href="https://github.com/civictechzenchiba/chibagouu/issues/new" target="_blank" rel="noopener">GitHub issue</a>). Reports from the public arrive through the report form on municipality pages. Municipalities with few dedicated pages so far include Inzai, Yachimata, Shiroi, Narashino, Nagara, Shirako, Chosei and Sosa</li>
         <li>Check that “Last collected” was refreshed in the morning (<a href="#job-card">what to do when it stops</a>)</li>
         <li>Submit requirements as GitHub issues or pull requests</li>
       </ul>
@@ -126,7 +126,7 @@
         <a href="https://docs.google.com/spreadsheets/d/1_dHZHMLvTx6iTCzwvbw6U9cTHjTIH_6RlEob81Ng7KM/edit?usp=sharing">Operations spreadsheet</a>
         (Anyone with the link can view it. Editing is by invitation only.)
       </p>
-      <p><a href="https://github.com/office626/r808chibagouu">GitHub repository</a></p>
+      <p><a href="https://github.com/civictechzenchiba/chibagouu">GitHub repository</a></p>
     </div>
     <div class="card" id="report-card">
       <h2>Handling “this is wrong or outdated” reports from readers</h2>
@@ -144,9 +144,9 @@
       <h2>When the daily collection stops</h2>
       <p>Every day at 06:00 (JST) GitHub Actions collects from the prefectural disaster portal, the Fire and Disaster Management Agency and the Japan Meteorological Agency, and updates the site. If “Last collected” on the top page is still older than yesterday, the collection did not succeed.</p>
       <ol class="steps">
-        <li><strong>Open the collect step; do not rely on the run colour.</strong> Open the latest run of <a href="https://github.com/office626/r808chibagouu/actions/workflows/daily.yml" target="_blank" rel="noopener">“Daily collect and GitHub Pages”</a> and read the <code>Collect official headlines</code> step. That step is set to keep going on failure, so <strong>the run can be green while nothing was collected</strong>. When every source is down it prints <code>all sources failed; keeping previous data</code>.</li>
+        <li><strong>Open the collect step; do not rely on the run colour.</strong> Open the latest run of <a href="https://github.com/civictechzenchiba/chibagouu/actions/workflows/daily.yml" target="_blank" rel="noopener">“Daily collect and GitHub Pages”</a> and read the <code>Collect official headlines</code> step. That step is set to keep going on failure, so <strong>the run can be green while nothing was collected</strong>. When every source is down it prints <code>all sources failed; keeping previous data</code>.</li>
         <li><strong>If you have write access, run it by hand.</strong> Use “Run workflow” on the same screen, branch main. If at least one source is up, “Last collected” refreshes within a few minutes. <strong>While every source is down, “Last collected” does not move</strong> — the previous data is kept as is. An unchanged timestamp means the sources themselves are down.</li>
-        <li><strong>If you do not have access, tell us.</strong> Post “daily job stopped” with the run URL in <a href="https://civictechzenchiba.slack.com/archives/C0BPSMN4L5D">Slack</a> or a <a href="https://github.com/office626/r808chibagouu/issues/new" target="_blank" rel="noopener">GitHub issue</a>.</li>
+        <li><strong>If you do not have access, tell us.</strong> Post “daily job stopped” with the run URL in <a href="https://civictechzenchiba.slack.com/archives/C0BPSMN4L5D">Slack</a> or a <a href="https://github.com/civictechzenchiba/chibagouu/issues/new" target="_blank" rel="noopener">GitHub issue</a>.</li>
         <li><strong>Find which source failed.</strong> When only some sources fail, they are recorded in <code>last_errors</code> in <code>site/data/collection.json</code>. <strong>When every source fails that file is not rewritten</strong>, so read the Actions log instead. <strong>A failed source keeps its previous value; only the sources that responded are refreshed.</strong></li>
       </ol>
       <p>The public pages keep showing the previous data when collection stops. Readers always see the note to check official sources for the latest information.</p>

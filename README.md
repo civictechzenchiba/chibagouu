@@ -2,7 +2,7 @@
 
 CivicTechZenChiba（CTZC）として、令和8年8月千葉豪雨の復興・災害対策のために検討しているポータルサイトの**要件定義**と、GitHub Pages 上の簡易公開サイトです。
 
-**公開サイト:** https://office626.github.io/r808chibagouu/
+**公開サイト:** https://civictechzenchiba.github.io/chibagouu/
 
 検証・添削・協働編集を歓迎します。Issue や Pull Request で指摘してください。
 
